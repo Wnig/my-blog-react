@@ -1,0 +1,51 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 880px;
+  height: 120px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 4px 10px rgba(0, 0, 0, 0.06);
+  .bg {
+    width: 100%;
+    object-fit: contain;
+  }
+  .header-con {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+    z-index: 2;
+    strong {
+      color: #fafafa;
+      font-size: 16px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+    .strong {
+      margin: 0 10px;
+    }
+    .sign {
+      color: #fafafa;
+      font-size: 14px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    }
+    .login-ico {
+      color: #fafafa;
+      font-size: 14px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.weather {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+  .tips {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    width: 210px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px -1px rgba(255, 255, 255, 1);
+    &::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: -15px;
+      width: 2px;
+      height: 15px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 2px 5px -1px rgba(255, 255, 255, 1);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: -15px;
+      width: 2px;
+      height: 15px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 2px 5px -1px rgba(255, 255, 255, 1);
+    }
+  }
+  .name {
+    max-width: 170px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    // @include ell();
+  }
+  .location {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    p {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin-right: 8px;
+      .date {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        font-size: 16px;
+      }
+      .week {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        font-size: 12px;
+      }
+      .tems {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        font-size: 12px;
+      }
+    }
+  }
+  .weather-con {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .tem {
+      height: 40px;
+      margin-right: 5px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      line-height: 45px;
+      font-size: 28px;
+    }
+    .wea {
+      height: 40px;
+      margin-right: 5px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      line-height: 50px;
+      font-size: 16px;
+    }
+    .air {
+      height: 40px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      line-height: 55px;
+      font-size: 12px;
+    }
+    i {
+      margin-right: 10px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      line-height: 28px;
+      font-size: 16px;
+    }
+  }
+  p {
+    font-size: 12px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+}

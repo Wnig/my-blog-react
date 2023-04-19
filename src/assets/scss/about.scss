@@ -1,0 +1,19 @@
+.article-cons {
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.05);
+  .art-con {
+    padding: 20px;
+    .tit {
+      margin-bottom: 20px;
+      color: #000;
+      font-size: 24px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    }
+    .article {
+      margin-bottom: 50px;
+      color: #403f3f;
+      font-size: 16px;
+    }
+  }
+}

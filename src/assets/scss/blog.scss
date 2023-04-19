@@ -1,0 +1,113 @@
+.blog {
+  min-height: 100vh;
+  .blog-con {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 880px;
+    margin: auto;
+    .right-con {
+      position: relative;
+      width: 665px;
+    }
+    .nav-list {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      border-radius: 5px;
+      background: #fff;
+      box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.05);
+      .ant-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        .ant-pagination-prev {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 44px;
+          height: 44px;
+          border-radius: 5px 0 0 5px;
+          border: none;
+          background: #333 !important;
+          button {
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            &:focus {
+              outline: none;
+            }
+            span {
+              color: #bdbdbd;
+            }
+          }
+        }
+        .ant-pagination-next {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 44px;
+          height: 44px;
+          border-radius: 0 5px 5px 0;
+          border: none;
+          background: #333 !important;
+          button {
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            &:focus {
+              outline: none;
+            }
+            span {
+              color: #bdbdbd;
+            }
+          }
+        }
+        .ant-pagination-item {
+          width: 40px;
+          font-size: 18px;
+          border: none;
+          cursor: pointer;
+          a {
+            color: #bdbdbd;
+          }
+          a:hover {
+            color: #000;
+          }
+        }
+        .ant-pagination-item-active {
+          a {
+            color: #000;
+          }
+          a:hover {
+            color: #000;
+          }
+        }
+        .ivu-page-disabled {
+          cursor: not-allowed;
+          a {
+            color: #bdbdbd;
+          }
+          a:hover {
+            color: #bdbdbd;
+          }
+        }
+        a {
+          color: #bdbdbd;
+        }
+        a:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}

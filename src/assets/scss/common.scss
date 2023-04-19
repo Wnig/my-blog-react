@@ -1,0 +1,84 @@
+@mixin ell() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin multi($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+/*解决border-1px*/
+@mixin min-device-pixel-ratio($scale2, $scale3) {
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2) {
+    transform: $scale2;
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3) {
+    transform: $scale3;
+  }
+}
+
+@mixin border-1px($color: #4a4a4a, $radius: 2px, $style: solid) {
+  border: 1px $style $color;
+  border-radius: $radius;
+}
+
+@mixin border-top-1px($color: #4a4a4a, $style: solid) {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 100%;
+    border-top: 1px $style $color;
+    transform-origin: 0 0;
+    @include min-device-pixel-ratio(scaleY(0.5), scaleY(0.33));
+  }
+}
+
+@mixin border-bottom-1px($color: #4a4a4a, $style: solid) {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    border-bottom: 1px $style $color;
+    transform-origin: 0 0;
+    @include min-device-pixel-ratio(scaleY(0.5), scaleY(0.33));
+  }
+}
+
+@mixin border-right-1px($color: #4a4a4a, $style: solid) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 1px;
+    height: 100%;
+    border-right: 1px $style $color;
+    transform-origin: 0 0;
+    @include min-device-pixel-ratio(scaleX(0.5), scaleX(0.33));
+  }
+}
+
+@mixin border-left-1px($color: #4a4a4a, $style: solid) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1px;
+    height: 100%;
+    border-left: 1px $style $color;
+    transform-origin: 0 0;
+    @include min-device-pixel-ratio(scaleX(0.5), scaleX(0.33));
+  }
+}
